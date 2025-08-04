@@ -235,6 +235,21 @@ def about():
     st.write(" I am a dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management. ")
     st.write(" I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully to impactful projects and collaborative teams.")    
     st.markdown("------")
+    st.markdown("------")
+
+    
+    st.write("""
+### 🛠️ **Skills / 🧰 Tech Stack**
+
+-  **Machine Learning**
+-  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
+- 🎯 **Supervised Learning algorithms**, 🌀 **Unsupervised Learning algorithms**, 🧠 Artificial Neural Networks (ANN), 🖼️ Convolutional Neural Networks (CNN)
+-  **Java**,  Python
+- 📚 **Scikit-Learn**,  TensorFlow,  Keras,  Pandas, ➗ NumPy
+- 🌐 **Streamlit UI** development
+-  **SQLite database**,  SQL
+- 📈 **Data Analysis** – insights extraction, business impact
+""")
     st.header("Education ")
     st.write("""
 **The Northcap University**  
