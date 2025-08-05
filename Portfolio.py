@@ -75,7 +75,7 @@ def navbar():
         """,
         unsafe_allow_html=True,
     )
-    col1, col2 = st.columns([4, 2])
+    col1, col2 = st.columns([5, 2])
     with col1:
         st.markdown('<div class="nav-title">Tushar Yadav\'s Portfolio 🌟</div>', unsafe_allow_html=True)
     with col2:
@@ -142,10 +142,28 @@ def home():
         st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
         st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
         st.write("📞 Phone: +91-8826610864")
+
     st.markdown("---")
+
     st.markdown(
-    """
-    <div style="background-color: #f0f2f6; padding: 20px; border-radius: 15px; border: 1px solid #ccc;">
+     """
+     <style>
+     .hover-box-interest {
+        background-color: rgba(240, 242, 246, 0.6);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        transition: all 0.3s ease-in-out;
+     }
+
+     .hover-box-interest:hover {
+        background-color: rgba(240, 242, 246, 0.9);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+     }
+     </style>
+
+     <div class="hover-box-interest">
         <h4>💡 <b>Interests</b></h4>
         <ul style="font-size: 16px; color: #31333f; list-style-type: none; padding-left: 1em;">
             <li>🤖 <b>Machine / Deep Learning</b></li>
@@ -154,10 +172,8 @@ def home():
             <li>🕹️ <b>Agentic AI</b></li>
             <li>🧩 <b>Multimodal AI Agents</b></li>
         </ul>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+     </div>
+     """, unsafe_allow_html=True)
     st.markdown("---")   
     st.header("Projects 🚀")
     st.write("")
@@ -226,86 +242,387 @@ def home():
             st.image(project["image"], width=600)
             st.write(project["details"])
     st.markdown("------")
+    st.header("🛠️ **Skills / 🧰 Tech Stack**")
+    st.write("")
+    st.markdown(
+    """
+    <style>
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
 
+    .hover-box {
+        background-color: rgba(240, 242, 246, 0.6);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        transition: all 0.3s ease-in-out;
+        width: 48%;
+        box-sizing: border-box;
+    }
+
+    .hover-box:hover {
+        background-color: rgba(240, 242, 246, 0.9);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+    }
+
+    .hover-box h4 {
+        margin-top: 0;
+        color: #31333f;
+    }
+
+    .hover-box p {
+        margin: 0;
+        font-size: 15px;
+        color: #444;
+    }
+
+    @media (max-width: 768px) {
+        .hover-box {
+            width: 100%;
+        }
+    }
+    </style>
+
+    <div class="grid-container">
+        <div class="hover-box">
+            <h4>🤖 Machine Learning</h4>
+            <p>Builds regression and classification models, from data preprocessing to deployment-ready pipelines.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🧠 Deep Learning</h4>
+            <p>Trained CNNs for image tasks like crop disease detection with real-world datasets. Using neural networks for advanced tasks like image and speech recognition.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🔍 SQL</h4>
+            <p>Intermediate SQL skills for querying and analyzing structured data in data science workflows.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🧮 Data Science</h4>
+            <p>Applies end-to-end workflows — from raw data to predictive insights and model deployment.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🌐 Streamlit</h4>
+            <p> Builds interactive dashboards and ML-powered web apps with user input and real-time predictions.</p>
+        </div>
+        <div class="hover-box">
+            <h4>⚙️ Python Programming</h4>
+            <p>Writes clean, modular, and functional code for AI, data science, and automation projects.</p>
+        </div>
+        <div class="hover-box">
+            <h4>📊 Data Visualization</h4>
+            <p>Performs exploratory data analysis using Pandas, Matplotlib, and Seaborn to extract key insights. Turning complex data into beautiful, meaningful visuals with insights.</p>
+        </div>
+        <div class="hover-box">
+            <h4>📦 TensorFlow & Scikit-learn</h4>
+            <p> Trains models using TF for deep learning and scikit-learn for traditional ML tasks.</p>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True )
         
-    st.write("""
-    ### 🛠️ **Skills / 🧰 Tech Stack**
-
-    -  **Machine Learning**/n
-     Builds regression and classification models, from data preprocessing to deployment-ready pipelines.
-                 
-    -  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
-    - 🎯 **Supervised Learning algorithms**, 🌀 **Unsupervised Learning algorithms**, 🧠 Artificial Neural Networks (ANN), 🖼️ Convolutional Neural Networks (CNN)
-    -  **Java**,  Python
-    - 📚 **Scikit-Learn**,  TensorFlow,  Keras,  Pandas, ➗ NumPy
-    - 🌐 **Streamlit UI** development
-    -  **SQLite database**,  SQL
-    - 📈 **Data Analysis** – insights extraction, business impact
-    """)
+    st.write("")
     st.markdown("---")
-    st.header("Education 🎓")
-    st.write("""
-    **The Northcap University**  
-    B.Tech (2021–2025)  
-    Learnt core concepts of SQL, AI & ML, DSA, and database management.  
+    st.markdown(
+     """
+     <style>
+     .experience-box {
+        background-color:  transparent;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+     }
 
-    **Suraj School, Mahendargarh**  
-    12th (2018–2020)  
-    Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.
-    """)
+     .experience-box p {
+        font-size: 16px;
+        color: #ffffff;
+        margin-bottom: 10px;
+     }
+
+     .experience-box b {
+        color: #ffffff;
+     }
+     </style>
+
+     <h2>💼 Experience</h2>
+ 
+     <div class="experience-box">
+        <p><b>MACHINE LEARNING TRAINEE</b> | July - Aug 2023<br>
+        Intrainz Innovation Pvt. Ltd. | Jul - Aug 2024</p>
+
+        <p>
+        Developed an online payment fraud detection system using machine learning. Analyzed transaction patterns to identify fraudulent behavior in real time, enhancing financial security and reducing risk for digital payment platforms.<br>
+        <b>Project:</b> Online Payment Fraud Detection
+        </p>
+        <br>
+
+        <p><b>AI & ML Intern – Microsoft Azure Platform</b> | June - July 2024<br>
+        The NorthCap University</p>
+
+        <p>
+        Completed the Microsoft Certified: Azure AI Fundamentals (AI-900) exam, gaining a strong foundation in AI concepts, and Azure services.<br>
+        Worked on real-time use cases using Azure Machine Learning, Cognitive Services, and Conversational AI tools.<br>
+        <b>Project:</b> Chatbot using MS Azure Cognitive Services
+        </p>
+     </div>
+     """,
+    unsafe_allow_html=True)
     st.markdown("---")
-    st.header("Contact")
-    st.write("Feel free to reach out to me!")
-    st.write("📧 Email : tusharyadav61900@gamil.com") 
-    st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
-    st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
-    st.write("📞 Phone: +91-8826610864")
+    st.markdown(
+     """
+     <style>
+     .hover-box-edu {
+        background-color: rgba(200, 230, 255, 0.4);  /* light bluish transparent */
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #99ccff;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 20px;
+     }
+
+     .hover-box-edu:hover {
+        background-color: rgba(200, 230, 255, 0.9);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+     }
+
+     .hover-box-edu p {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        color: #1a1a1a;
+     }
+
+     .hover-box-edu strong {
+        font-size: 17px;
+        color: #003366;
+     }
+     </style>
+ 
+     <h2>🎓 Education</h2>
+
+     <div class="hover-box-edu">
+        <p><strong>The NorthCap University</strong><br>
+        B.Tech (2021–2025)<br>
+        Learnt core concepts of SQL, AI & ML, DSA, and database management.</p>
+
+        <p><strong>Suraj School, Mahendargarh</strong><br>
+        12th (2018–2020)<br>
+        Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.</p>
+      </div>
+     """,
+    unsafe_allow_html=True )
+
 
 
 def about():
-    st.header("About Me")
+    st.header("🌈About Me")
     st.write("""
-        Hi, I'm Tushar Yadav, a software developer with a passion for building impactful solutions.
-        I specialize in Python, web development, and data science. I love learning new technologies and collaborating on exciting projects.
-    """)
-    st.write(" I am a dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management. ")
-    st.write(" I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully to impactful projects and collaborative teams.")    
-    st.markdown("------")
-    
-    
+        A dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. 
+        I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. 
+        My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management.
+        """)
     st.write("""
-### 🛠️ **Skills / 🧰 Tech Stack**
+        I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. 
+        With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully 
+        to impactful projects and collaborative teams.
+        """)
+    st.write("")
+    st.markdown("---")  
+    st.header("🛠️ **Skills / 🧰 Tech Stack**")
+    st.write("")
+    st.markdown(
+    """
+    <style>
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
 
--  **Machine Learning**
--  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
-- 🎯 **Supervised Learning algorithms**, 🌀 **Unsupervised Learning algorithms**, 🧠 Artificial Neural Networks (ANN), 🖼️ Convolutional Neural Networks (CNN)
--  **Java**,  Python
-- 📚 **Scikit-Learn**,  TensorFlow,  Keras,  Pandas, ➗ NumPy
-- 🌐 **Streamlit UI** development
--  **SQLite database**,  SQL
-- 📈 **Data Analysis** – insights extraction, business impact
-""")
-    st.markdown("------")
+    .hover-box {
+        background-color: rgba(240, 242, 246, 0.6);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        transition: all 0.3s ease-in-out;
+        width: 48%;
+        box-sizing: border-box;
+    }
 
-    st.header("Education ")
-    st.write("""
-**The Northcap University**  
-B.Tech (2021–2025)  
-Learnt core concepts of SQL, AI & ML, DSA, and database management.  
+    .hover-box:hover {
+        background-color: rgba(240, 242, 246, 0.9);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+    }
 
-**Suraj School, Mahendargarh**  
-12th (2018–2020)  
-Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.
-""")
+    .hover-box h4 {
+        margin-top: 0;
+        color: #31333f;
+    }
 
+    .hover-box p {
+        margin: 0;
+        font-size: 15px;
+        color: #444;
+    }
 
+    @media (max-width: 768px) {
+        .hover-box {
+            width: 100%;
+        }
+    }
+    </style>
+
+    <div class="grid-container">
+        <div class="hover-box">
+            <h4>🤖 Machine Learning</h4>
+            <p>Builds regression and classification models, from data preprocessing to deployment-ready pipelines.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🧠 Deep Learning</h4>
+            <p>Trained CNNs for image tasks like crop disease detection with real-world datasets. Using neural networks for advanced tasks like image and speech recognition.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🔍 SQL</h4>
+            <p>Intermediate SQL skills for querying and analyzing structured data in data science workflows.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🧮 Data Science</h4>
+            <p>Applies end-to-end workflows — from raw data to predictive insights and model deployment.</p>
+        </div>
+        <div class="hover-box">
+            <h4>🌐 Streamlit</h4>
+            <p> Builds interactive dashboards and ML-powered web apps with user input and real-time predictions.</p>
+        </div>
+        <div class="hover-box">
+            <h4>⚙️ Python Programming</h4>
+            <p>Writes clean, modular, and functional code for AI, data science, and automation projects.</p>
+        </div>
+        <div class="hover-box">
+            <h4>📊 Data Visualization</h4>
+            <p>Performs exploratory data analysis using Pandas, Matplotlib, and Seaborn to extract key insights. Turning complex data into beautiful, meaningful visuals with insights.</p>
+        </div>
+        <div class="hover-box">
+            <h4>📦 TensorFlow & Scikit-learn</h4>
+            <p> Trains models using TF for deep learning and scikit-learn for traditional ML tasks.</p>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True )
+        
+    st.write("")
+    st.markdown("---")
+    st.markdown(
+     """
+     <style>
+     .experience-box {
+        background-color:  transparent;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+     }
+
+     .experience-box p {
+        font-size: 16px;
+        color: #ffffff;
+        margin-bottom: 10px;
+     }
+
+     .experience-box b {
+        color: #ffffff;
+     }
+     </style>
+
+     <h2>💼 Experience</h2>
+ 
+     <div class="experience-box">
+        <p><b>MACHINE LEARNING TRAINEE</b> | July - Aug 2023<br>
+        Intrainz Innovation Pvt. Ltd. | Jul - Aug 2024</p>
+
+        <p>
+        Developed an online payment fraud detection system using machine learning. Analyzed transaction patterns to identify fraudulent behavior in real time, enhancing financial security and reducing risk for digital payment platforms.<br>
+        <b>Project:</b> Online Payment Fraud Detection
+        </p>
+        <br>
+
+        <p><b>AI & ML Intern – Microsoft Azure Platform</b> | June - July 2024<br>
+        The NorthCap University</p>
+
+        <p>
+        Completed the Microsoft Certified: Azure AI Fundamentals (AI-900) exam, gaining a strong foundation in AI concepts, and Azure services.<br>
+        Worked on real-time use cases using Azure Machine Learning, Cognitive Services, and Conversational AI tools.<br>
+        <b>Project:</b> Chatbot using MS Azure Cognitive Services
+        </p>
+     </div>
+     """,
+    unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown(
+     """
+     <style>
+     .hover-box-edu {
+        background-color: rgba(200, 230, 255, 0.4);  /* light bluish transparent */
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #99ccff;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 20px;
+     }
+
+     .hover-box-edu:hover {
+        background-color: rgba(200, 230, 255, 0.9);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+     }
+
+     .hover-box-edu p {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        color: #1a1a1a;
+     }
+
+     .hover-box-edu strong {
+        font-size: 17px;
+        color: #003366;
+     }
+     </style>
+ 
+     <h2>🎓 Education</h2>
+
+     <div class="hover-box-edu">
+        <p><strong>The NorthCap University</strong><br>
+        B.Tech (2021–2025)<br>
+        Learnt core concepts of SQL, AI & ML, DSA, and database management.</p>
+
+        <p><strong>Suraj School, Mahendargarh</strong><br>
+        12th (2018–2020)<br>
+        Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.</p>
+      </div>
+     """,
+    unsafe_allow_html=True )
+   
 def contact():
-    st.header("Contact")
-    st.write("Feel free to reach out to me!")
-    st.write("📧 Email : tusharyadav61900@gamil.com") 
-    st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
-    st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
-    st.write("📞 Phone: +91-8826610864")
+        
+        st.header("Contact")
+        st.write("Feel free to reach out to me!")
+        st.write("📧 Email: tusharyadav61900@gamil.com") 
+        st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
+        st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
+        st.write("📞 Phone: +91-8826610864")
+
+    
+    
+
+
+
+
 
 # --- Main App ---
 def main():
