@@ -121,10 +121,34 @@ st.markdown("""
 # --- Pages ---
 def home():
     
-    st.header("Tushar Yadav ")
-    st.write(" A dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management. ")
-    st.write(" I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully to impactful projects and collaborative teams.")    
+   
+# Create two columns
+ col1, col2 = st.columns(2)
+
+ with col2:
+    st.header("🌈About Me")
+    st.write("""
+    A dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. 
+    I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. 
+    My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management.
+    """)
+    st.write("""
+    I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. 
+    With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully 
+    to impactful projects and collaborative teams.
+    """)
     st.markdown("------")
+
+ with col1:
+    st.header("Contact")
+    st.write("Feel free to reach out to me!")
+    st.write("📧 Email: tusharyadav61900@gamil.com") 
+    st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
+    st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
+    st.write("📞 Phone: +91-8826610864")
+    st.markdown("---")
+
+
     st.header("Projects 🚀")
 
     projects = [
@@ -197,7 +221,7 @@ def home():
     st.write("""
 ### 🛠️ **Skills / 🧰 Tech Stack**
 
--  **Machine Learning**
+-  **Machine Learning**/n
  Builds regression and classification models, from data preprocessing to deployment-ready pipelines.
              
 -  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
