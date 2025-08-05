@@ -123,7 +123,7 @@ def home():
     
    
 # Create two columns
- col1, col2 = st.columns(2)
+ col1, col2 = st.columns([1,2])
 
  with col2:
     st.header("🌈About Me")
@@ -137,7 +137,7 @@ def home():
     With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully 
     to impactful projects and collaborative teams.
     """)
-    st.markdown("------")
+    
 
  with col1:
     st.header("Contact")
@@ -146,12 +146,12 @@ def home():
     st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
     st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
     st.write("📞 Phone: +91-8826610864")
-    st.markdown("---")
+   
 
+st.markdown("---")   
+st.header("Projects 🚀")
 
-    st.header("Projects 🚀")
-
-    projects = [
+projects = [
         {
             "title": "Cancer Diagnosis Assistant",
             "image":  encode_image_to_base64("cancer.png"),
@@ -175,9 +175,9 @@ def home():
         },
     ]
 
-    cols = st.columns(2)
+cols = st.columns(2)
 
-    with cols[0]:
+with cols[0]:
         for i in [0, 2]:
             project = projects[i]
             st.markdown(f"""
@@ -190,7 +190,7 @@ def home():
                 </form>
             """, unsafe_allow_html=True)
 
-    with cols[1]:
+with cols[1]:
         i = 1
         project = projects[i]
         st.markdown(f"""
@@ -204,21 +204,21 @@ def home():
         """, unsafe_allow_html=True)
 
     # Handle query param click
-    query = st.query_params
-    if "proj" in query:
+query = st.query_params
+if "proj" in query:
         idx = int(query["proj"][0])
         st.session_state["show_project"] = idx
 
-    if st.session_state["show_project"] is not None:
+if st.session_state["show_project"] is not None:
         project = projects[st.session_state["show_project"]]
         st.markdown("---")
         st.subheader(project["title"])
         st.image(project["image"], width=600)
         st.write(project["details"])
-    st.markdown("------")
+st.markdown("------")
 
     
-    st.write("""
+st.write("""
 ### 🛠️ **Skills / 🧰 Tech Stack**
 
 -  **Machine Learning**/n
@@ -232,9 +232,9 @@ def home():
 -  **SQLite database**,  SQL
 - 📈 **Data Analysis** – insights extraction, business impact
 """)
-    st.markdown("---")
-    st.header("Education 🎓")
-    st.write("""
+st.markdown("---")
+st.header("Education 🎓")
+st.write("""
 **The Northcap University**  
 B.Tech (2021–2025)  
 Learnt core concepts of SQL, AI & ML, DSA, and database management.  
@@ -243,13 +243,13 @@ Learnt core concepts of SQL, AI & ML, DSA, and database management.
 12th (2018–2020)  
 Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.
 """)
-    st.markdown("---")
-    st.header("Contact")
-    st.write("Feel free to reach out to me!")
-    st.write("📧 Email : tusharyadav61900@gamil.com") 
-    st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
-    st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
-    st.write("📞 Phone: +91-8826610864")
+st.markdown("---")
+st.header("Contact")
+st.write("Feel free to reach out to me!")
+st.write("📧 Email : tusharyadav61900@gamil.com") 
+st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
+st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
+st.write("📞 Phone: +91-8826610864")
 
 
 def about():
