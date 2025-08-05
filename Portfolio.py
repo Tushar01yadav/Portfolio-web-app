@@ -138,7 +138,7 @@ def home():
         {
             "title": "Smart Farming Assistant",
             "image": encode_image_to_base64("crop.png"),
-            "description": "Crop Recommender + Disease Detector",
+            "description": "Crop Recommender + Disease Detector, An AI tool to assist farmers with crop planning and disease management,an AI-powered web app that helps farmers make data-driven decisions!",
             "details": "An AI tool to assist farmers with crop planning and disease management,an AI-powered web app that helps farmers make data-driven decisions! This system recommends the most suitable crop based on environmental conditions and detects plant diseases using image classification (CNN).",
             "link": "https://github.com/Tushar01yadav/Smart-Farming-Assistant-Crop-Recommender-Disease-Detector"
         },
