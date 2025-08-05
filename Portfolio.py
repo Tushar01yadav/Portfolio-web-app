@@ -198,6 +198,8 @@ def home():
 ### 🛠️ **Skills / 🧰 Tech Stack**
 
 -  **Machine Learning**
+ Builds regression and classification models, from data preprocessing to deployment-ready pipelines.
+             
 -  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
 - 🎯 **Supervised Learning algorithms**, 🌀 **Unsupervised Learning algorithms**, 🧠 Artificial Neural Networks (ANN), 🖼️ Convolutional Neural Networks (CNN)
 -  **Java**,  Python
