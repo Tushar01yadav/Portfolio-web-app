@@ -121,7 +121,7 @@ st.markdown("""
 # --- Pages ---
 def home():
     # Create two columns
-    col1, col2 = st.columns([1,2])
+    col1, col2 = st.columns([0.9,2.1])
 
     with col2:
         st.header("🌈About Me")
@@ -142,11 +142,25 @@ def home():
         st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
         st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
         st.write("📞 Phone: +91-8826610864")
-    
-
+    st.markdown("---")
+    st.markdown(
+    """
+    <div style="background-color: #f0f2f6; padding: 20px; border-radius: 15px; border: 1px solid #ccc;">
+        <h4>💡 <b>Interests</b></h4>
+        <ul style="font-size: 16px; color: #31333f; list-style-type: none; padding-left: 1em;">
+            <li>🤖 <b>Machine / Deep Learning</b></li>
+            <li>🧠 <b>Natural Language Processing (NLP)</b></li>
+            <li>🔁 <b>Transformer Models / LLMs</b></li>
+            <li>🕹️ <b>Agentic AI</b></li>
+            <li>🧩 <b>Multimodal AI Agents</b></li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     st.markdown("---")   
     st.header("Projects 🚀")
-
+    st.write("")
     projects = [
             {
                 "title": "Cancer Diagnosis Assistant",
