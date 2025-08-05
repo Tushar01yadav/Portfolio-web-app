@@ -120,68 +120,77 @@ st.markdown("""
 
 # --- Pages ---
 def home():
+    # Create two columns
+    col1, col2 = st.columns([1,2])
+
+    with col2:
+        st.header("🌈About Me")
+        st.write("""
+        A dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. 
+        I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. 
+        My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management.
+        """)
+        st.write("""
+        I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. 
+        With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully 
+        to impactful projects and collaborative teams.
+        """)
+    with col1:
+        st.header("Contact")
+        st.write("Feel free to reach out to me!")
+        st.write("📧 Email: tusharyadav61900@gamil.com") 
+        st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
+        st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
+        st.write("📞 Phone: +91-8826610864")
     
-   
-# Create two columns
- col1, col2 = st.columns([1,2])
 
- with col2:
-    st.header("🌈About Me")
-    st.write("""
-    A dedicated and aspiring Machine Learning Engineer with a strong passion for building intelligent systems that solve real-world problems. 
-    I aim to contribute to an organization that values innovation and supports both technical advancement and personal development. 
-    My expertise lies in Machine Learning, Deep Learning, SQL, Streamlit, and Database Management.
-    """)
-    st.write("""
-    I enjoy transforming data into actionable insights and deploying user-friendly applications that make complex models accessible. 
-    With a growth mindset and a commitment to continuous learning, I strive to stay at the forefront of AI advancements and contribute meaningfully 
-    to impactful projects and collaborative teams.
-    """)
-    
+    st.markdown("---")   
+    st.header("Projects 🚀")
 
- with col1:
-    st.header("Contact")
-    st.write("Feel free to reach out to me!")
-    st.write("📧 Email: tusharyadav61900@gamil.com") 
-    st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
-    st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
-    st.write("📞 Phone: +91-8826610864")
-   
+    projects = [
+            {
+                "title": "Cancer Diagnosis Assistant",
+                "image":  encode_image_to_base64("cancer.png"),
+                "description": "A smart diagnostic tool using ML models, A smart, self-learning web application for breast cancer prediction built with Streamlit.The app automatically retrains itself after every 5 new inputs by learning from stored input/output data.",
+                "details": "This project is a smart, self-learning web application for breast cancer prediction built with Streamlit. The app automatically retrains itself after every 5 new inputs by learning from stored input/output data. It uses machine learning models to predict the likelihood of breast cancer based on user inputs.",
+                "link": "https://github.com/Tushar01yadav/Cancer-Diagnosis-Assistant-Self-Learning-"
+            },
+            {
+                "title": "Smart Farming Assistant",
+                "image": encode_image_to_base64("crop.png"),
+                "description": "Crop Recommender + Disease Detector, An AI tool to assist farmers with crop planning and disease management,an AI-powered web app that helps farmers make data-driven decisions!",
+                "details": "An AI tool to assist farmers with crop planning and disease management,an AI-powered web app that helps farmers make data-driven decisions! This system recommends the most suitable crop based on environmental conditions and detects plant diseases using image classification (CNN).",
+                "link": "https://github.com/Tushar01yadav/Smart-Farming-Assistant-Crop-Recommender-Disease-Detector"
+            },
+            {
+                "title": "Satellite Land Use Classification",
+                "image": encode_image_to_base64("sat1.png"),
+                "description": "Classify land use from satellite images, A CNN-powered deep learning project that classifies satellite images into different land use categories such as urban, forest, water, and agriculture. Built with an interactive Streamlit frontend for real-time inference and visualization.",
+                "details": "A deep learning pipeline that analyzes satellite imagery for land classification.",
+                "link": "https://github.com/Tushar01yadav/Satellite-Image-Land-Use-Classification"
+            },
+        ]
 
-st.markdown("---")   
-st.header("Projects 🚀")
+    cols = st.columns(2)
 
-projects = [
-        {
-            "title": "Cancer Diagnosis Assistant",
-            "image":  encode_image_to_base64("cancer.png"),
-            "description": "A smart diagnostic tool using ML models, A smart, self-learning web application for breast cancer prediction built with Streamlit.The app automatically retrains itself after every 5 new inputs by learning from stored input/output data.",
-            "details": "This project is a smart, self-learning web application for breast cancer prediction built with Streamlit. The app automatically retrains itself after every 5 new inputs by learning from stored input/output data. It uses machine learning models to predict the likelihood of breast cancer based on user inputs.",
-            "link": "https://github.com/Tushar01yadav/Cancer-Diagnosis-Assistant-Self-Learning-"
-        },
-        {
-            "title": "Smart Farming Assistant",
-            "image": encode_image_to_base64("crop.png"),
-            "description": "Crop Recommender + Disease Detector, An AI tool to assist farmers with crop planning and disease management,an AI-powered web app that helps farmers make data-driven decisions!",
-            "details": "An AI tool to assist farmers with crop planning and disease management,an AI-powered web app that helps farmers make data-driven decisions! This system recommends the most suitable crop based on environmental conditions and detects plant diseases using image classification (CNN).",
-            "link": "https://github.com/Tushar01yadav/Smart-Farming-Assistant-Crop-Recommender-Disease-Detector"
-        },
-        {
-            "title": "Satellite Land Use Classification",
-            "image": encode_image_to_base64("sat1.png"),
-            "description": "Classify land use from satellite images, A CNN-powered deep learning project that classifies satellite images into different land use categories such as urban, forest, water, and agriculture. Built with an interactive Streamlit frontend for real-time inference and visualization.",
-            "details": "A deep learning pipeline that analyzes satellite imagery for land classification.",
-            "link": "https://github.com/Tushar01yadav/Satellite-Image-Land-Use-Classification"
-        },
-    ]
+    with cols[0]:
+            for i in [0, 2]:
+                project = projects[i]
+                st.markdown(f"""
+                    <a href="{project['link']}" target="_blank" style="text-decoration: none;">
+                        <div class="project-card" onclick="this.parentNode.submit();">
+                            <img src="{project['image']}" />
+                            <div class="project-title">{project['title']}</div>
+                            <p style='color:#ccc;font-size:0.9rem;'>{project['description']}</p>
+                        </div>
+                    </form>
+                """, unsafe_allow_html=True)
 
-cols = st.columns(2)
-
-with cols[0]:
-        for i in [0, 2]:
+    with cols[1]:
+            i = 1
             project = projects[i]
             st.markdown(f"""
-                <a href="{project['link']}" target="_blank" style="text-decoration: none;">
+                 <a href="{project['link']}" target="_blank" style="text-decoration: none;">
                     <div class="project-card" onclick="this.parentNode.submit();">
                         <img src="{project['image']}" />
                         <div class="project-title">{project['title']}</div>
@@ -190,66 +199,53 @@ with cols[0]:
                 </form>
             """, unsafe_allow_html=True)
 
-with cols[1]:
-        i = 1
-        project = projects[i]
-        st.markdown(f"""
-             <a href="{project['link']}" target="_blank" style="text-decoration: none;">
-                <div class="project-card" onclick="this.parentNode.submit();">
-                    <img src="{project['image']}" />
-                    <div class="project-title">{project['title']}</div>
-                    <p style='color:#ccc;font-size:0.9rem;'>{project['description']}</p>
-                </div>
-            </form>
-        """, unsafe_allow_html=True)
+        # Handle query param click
+    query = st.query_params
+    if "proj" in query:
+            idx = int(query["proj"][0])
+            st.session_state["show_project"] = idx
 
-    # Handle query param click
-query = st.query_params
-if "proj" in query:
-        idx = int(query["proj"][0])
-        st.session_state["show_project"] = idx
+    if st.session_state["show_project"] is not None:
+            project = projects[st.session_state["show_project"]]
+            st.markdown("---")
+            st.subheader(project["title"])
+            st.image(project["image"], width=600)
+            st.write(project["details"])
+    st.markdown("------")
 
-if st.session_state["show_project"] is not None:
-        project = projects[st.session_state["show_project"]]
-        st.markdown("---")
-        st.subheader(project["title"])
-        st.image(project["image"], width=600)
-        st.write(project["details"])
-st.markdown("------")
+        
+    st.write("""
+    ### 🛠️ **Skills / 🧰 Tech Stack**
 
-    
-st.write("""
-### 🛠️ **Skills / 🧰 Tech Stack**
+    -  **Machine Learning**/n
+     Builds regression and classification models, from data preprocessing to deployment-ready pipelines.
+                 
+    -  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
+    - 🎯 **Supervised Learning algorithms**, 🌀 **Unsupervised Learning algorithms**, 🧠 Artificial Neural Networks (ANN), 🖼️ Convolutional Neural Networks (CNN)
+    -  **Java**,  Python
+    - 📚 **Scikit-Learn**,  TensorFlow,  Keras,  Pandas, ➗ NumPy
+    - 🌐 **Streamlit UI** development
+    -  **SQLite database**,  SQL
+    - 📈 **Data Analysis** – insights extraction, business impact
+    """)
+    st.markdown("---")
+    st.header("Education 🎓")
+    st.write("""
+    **The Northcap University**  
+    B.Tech (2021–2025)  
+    Learnt core concepts of SQL, AI & ML, DSA, and database management.  
 
--  **Machine Learning**/n
- Builds regression and classification models, from data preprocessing to deployment-ready pipelines.
-             
--  **Python**, 🧹 Data Preprocessing, 📊 Data Visualization
-- 🎯 **Supervised Learning algorithms**, 🌀 **Unsupervised Learning algorithms**, 🧠 Artificial Neural Networks (ANN), 🖼️ Convolutional Neural Networks (CNN)
--  **Java**,  Python
-- 📚 **Scikit-Learn**,  TensorFlow,  Keras,  Pandas, ➗ NumPy
-- 🌐 **Streamlit UI** development
--  **SQLite database**,  SQL
-- 📈 **Data Analysis** – insights extraction, business impact
-""")
-st.markdown("---")
-st.header("Education 🎓")
-st.write("""
-**The Northcap University**  
-B.Tech (2021–2025)  
-Learnt core concepts of SQL, AI & ML, DSA, and database management.  
-
-**Suraj School, Mahendargarh**  
-12th (2018–2020)  
-Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.
-""")
-st.markdown("---")
-st.header("Contact")
-st.write("Feel free to reach out to me!")
-st.write("📧 Email : tusharyadav61900@gamil.com") 
-st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
-st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
-st.write("📞 Phone: +91-8826610864")
+    **Suraj School, Mahendargarh**  
+    12th (2018–2020)  
+    Achieved 96% in 12th Science (PCM), demonstrating strong academic excellence.
+    """)
+    st.markdown("---")
+    st.header("Contact")
+    st.write("Feel free to reach out to me!")
+    st.write("📧 Email : tusharyadav61900@gamil.com") 
+    st.write("🐙 GitHub: [Tushar Yadav](https://github.com/Tushar01yadav?tab=repositories)")
+    st.write("🔗 LinkedIn: [Tushar Yadav](https://www.linkedin.com/in/tushar-yadav-5829bb353/)")
+    st.write("📞 Phone: +91-8826610864")
 
 
 def about():
