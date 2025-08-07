@@ -78,6 +78,15 @@ def navbar():
     col1, col2 = st.columns([5, 2])
     with col1:
         st.markdown('<div class="nav-title">Tushar Yadav\'s Portfolio 🌟</div>', unsafe_allow_html=True)
+        with open("Tushar Yadav Resume.pdf", "rb") as pdf_file:
+         PDFbyte = pdf_file.read()
+
+        st.download_button(label="📄 Resume",
+                   data=PDFbyte,
+                   file_name="Tushar Yadav Resume.pdf",
+                   mime="application/pdf")
+
+        
     with col2:
         btn_home, btn_about, btn_contact = st.columns(3)
         with btn_home:
