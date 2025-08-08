@@ -208,6 +208,13 @@ def home():
                 "details": "A deep learning pipeline that analyzes satellite imagery for land classification.",
                 "link": "https://github.com/Tushar01yadav/Satellite-Image-Land-Use-Classification"
             },
+             {
+                "title": "Review Sentient Analysis on Products / Movies",
+                "image": encode_image_to_base64("r1.png"),
+                "description": "Review Sentiment Analyzer is a user-friendly web application that analyzes the sentiment of product or movie reviews. It leverages two powerful models — a state-of-the-art Hugging Face transformer and a classic Scikit-Learn classifier — to predict whether a review is positive or negative, providing confidence scores for better insights. Built with Streamlit, the app offers a sleek interface for quick and accurate sentiment analysis. ",
+                "details": " Review Sentiment Analyzer is a user-friendly web application that analyzes the sentiment of product or movie reviews. It leverages two powerful models — a state-of-the-art Hugging Face transformer and a classic Scikit-Learn classifier — to predict whether a review is positive or negative, providing confidence scores for better insights. Built with Streamlit, the app offers a sleek interface for quick and accurate sentiment analysis.",
+                "link": "https://github.com/Tushar01yadav/Sentiment-analysis-Product-Movie-.git"
+            },
         ]
 
     cols = st.columns(2)
