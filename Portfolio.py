@@ -227,7 +227,7 @@ def home():
     cols = st.columns(2)
 
     with cols[0]:
-            for i in [0, 2]:
+            for i in [0, 2,4]:
                 project = projects[i]
                 st.markdown(f"""
                     <a href="{project['link']}" target="_blank" style="text-decoration: none;">
