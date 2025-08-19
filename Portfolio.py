@@ -188,6 +188,13 @@ def home():
     st.write("")
     projects = [
             {
+                "title": "Pdf Summarizer RAG System",
+                "image":  encode_image_to_base64("rag.png"),
+                "description": "Unlike traditional PDF text extraction (which often fails on scanned or image-based PDFs), this system: Converts PDF pages into images Generates captions (OCR + image captioning) to accurately extract text Creates embeddings of extracted content Embeds the user query for semantic similarity search",
+                "details": "This project is a smart, self-learning web application for breast cancer prediction built with Streamlit. The app automatically retrains itself after every 5 new inputs by learning from stored input/output data. It uses machine learning models to predict the likelihood of breast cancer based on user inputs.",
+                "link": "https://github.com/Tushar01yadav/PDF-Summarizer-QA-Chatbot-RAG-System-.git"
+            },
+            {
                 "title": "Cancer Diagnosis Assistant",
                 "image":  encode_image_to_base64("cancer.png"),
                 "description": "A smart diagnostic tool using ML models, A smart, self-learning web application for breast cancer prediction built with Streamlit.The app automatically retrains itself after every 5 new inputs by learning from stored input/output data.",
